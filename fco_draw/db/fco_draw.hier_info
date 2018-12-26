@@ -1,0 +1,35 @@
+|fco_draw
+pin_name9 <= 21mux:inst2.Y
+pin_name8 => 21mux:inst2.S
+pin_name3 => 21mux:inst1.S
+pin_name3 => 21mux:inst.S
+pin_name5 => 21mux:inst1.B
+pin_name4 => 21mux:inst1.A
+pin_name2 => 21mux:inst.B
+pin_name => 21mux:inst.A
+
+
+|fco_draw|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|fco_draw|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|fco_draw|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+

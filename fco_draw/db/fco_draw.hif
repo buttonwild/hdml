@@ -1,0 +1,64 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+10
+851
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+21mux
+# storage
+db|fco_draw.(1).cnf
+db|fco_draw.(1).cnf
+# case_insensitive
+# source_file
+f:|altera|90sp2|quartus|libraries|others|maxplus2|21mux.bdf
+58999bd3808c6118fcb8193d74b5b94f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+21mux:inst2
+21mux:inst1
+21mux:inst
+}
+# macro_sequence
+
+# end
+# entity
+fco_draw
+# storage
+db|fco_draw.(0).cnf
+db|fco_draw.(0).cnf
+# case_insensitive
+# source_file
+fco_draw.bdf
+821fbf9bc7e52bd84ef670251c033
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

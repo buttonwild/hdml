@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, I:/课件/hdml/tco/tco.vhd
+source_file = 1, I:/课件/hdml/fco/fco.vhd
+source_file = 1, I:/课件/hdml/fco/fco.vwf
+source_file = 1, I:/课件/hdml/fco/db/fco.cbx.xml
+design_name = fco
+instance = comp, \int0~input , int0~input, fco, 1
+instance = comp, \o2~output , o2~output, fco, 1
+instance = comp, \int2~input , int2~input, fco, 1
+instance = comp, \s0~input , s0~input, fco, 1
+instance = comp, \int1~input , int1~input, fco, 1
+instance = comp, \s1~input , s1~input, fco, 1
+instance = comp, \u2|o0~1 , u2|o0~1, fco, 1
+instance = comp, \int3~input , int3~input, fco, 1
+instance = comp, \u2|o0~2 , u2|o0~2, fco, 1

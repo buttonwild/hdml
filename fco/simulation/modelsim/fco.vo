@@ -1,0 +1,177 @@
+// Copyright (C) 1991-2009 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition"
+
+// DATE "12/25/2018 19:52:40"
+
+// 
+// Device: Altera EP3C55F484C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module fco (
+	int0,
+	int1,
+	int2,
+	int3,
+	s0,
+	s1,
+	o2);
+input 	int0;
+input 	int1;
+input 	int2;
+input 	int3;
+input 	s0;
+input 	s1;
+output 	o2;
+
+wire gnd = 1'b0;
+wire vcc = 1'b1;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("fco_v.sdo");
+// synopsys translate_on
+
+wire \int0~input_o ;
+wire \o2~output_o ;
+wire \int2~input_o ;
+wire \s0~input_o ;
+wire \int1~input_o ;
+wire \s1~input_o ;
+wire \u2|o0~1_combout ;
+wire \int3~input_o ;
+wire \u2|o0~2_combout ;
+
+
+// atom is at IOIBUF_X1_Y53_N1
+cycloneiii_io_ibuf \int0~input (
+	.i(int0),
+	.ibar(gnd),
+	.o(\int0~input_o ));
+// synopsys translate_off
+defparam \int0~input .bus_hold = "false";
+defparam \int0~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOOBUF_X0_Y49_N9
+cycloneiii_io_obuf \o2~output (
+	.i(\u2|o0~2_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o2~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o2~output .bus_hold = "false";
+defparam \o2~output .open_drain_output = "false";
+// synopsys translate_on
+
+// atom is at IOIBUF_X0_Y49_N1
+cycloneiii_io_ibuf \int2~input (
+	.i(int2),
+	.ibar(gnd),
+	.o(\int2~input_o ));
+// synopsys translate_off
+defparam \int2~input .bus_hold = "false";
+defparam \int2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOIBUF_X11_Y53_N15
+cycloneiii_io_ibuf \s0~input (
+	.i(s0),
+	.ibar(gnd),
+	.o(\s0~input_o ));
+// synopsys translate_off
+defparam \s0~input .bus_hold = "false";
+defparam \s0~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOIBUF_X73_Y53_N1
+cycloneiii_io_ibuf \int1~input (
+	.i(int1),
+	.ibar(gnd),
+	.o(\int1~input_o ));
+// synopsys translate_off
+defparam \int1~input .bus_hold = "false";
+defparam \int1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOIBUF_X3_Y53_N8
+cycloneiii_io_ibuf \s1~input (
+	.i(s1),
+	.ibar(gnd),
+	.o(\s1~input_o ));
+// synopsys translate_off
+defparam \s1~input .bus_hold = "false";
+defparam \s1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at LCCOMB_X1_Y49_N0
+cycloneiii_lcell_comb \u2|o0~1 (
+// Equation(s):
+// \u2|o0~1_combout  = \s0~input_o  & (\int1~input_o  # \s1~input_o ) # !\s0~input_o  & \int0~input_o  & (!\s1~input_o )
+
+	.dataa(\int0~input_o ),
+	.datab(\s0~input_o ),
+	.datac(\int1~input_o ),
+	.datad(\s1~input_o ),
+	.cin(gnd),
+	.combout(\u2|o0~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \u2|o0~1 .lut_mask = 16'hCCE2;
+defparam \u2|o0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// atom is at IOIBUF_X0_Y48_N8
+cycloneiii_io_ibuf \int3~input (
+	.i(int3),
+	.ibar(gnd),
+	.o(\int3~input_o ));
+// synopsys translate_off
+defparam \int3~input .bus_hold = "false";
+defparam \int3~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at LCCOMB_X1_Y49_N2
+cycloneiii_lcell_comb \u2|o0~2 (
+// Equation(s):
+// \u2|o0~2_combout  = \u2|o0~1_combout  & (\int3~input_o  # !\s1~input_o ) # !\u2|o0~1_combout  & \int2~input_o  & (\s1~input_o )
+
+	.dataa(\int2~input_o ),
+	.datab(\u2|o0~1_combout ),
+	.datac(\int3~input_o ),
+	.datad(\s1~input_o ),
+	.cin(gnd),
+	.combout(\u2|o0~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \u2|o0~2 .lut_mask = 16'hE2CC;
+defparam \u2|o0~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign o2 = \o2~output_o ;
+
+endmodule

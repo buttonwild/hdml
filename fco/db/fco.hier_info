@@ -1,0 +1,32 @@
+|fco
+int0 => tco:u0.a0
+int1 => tco:u0.b0
+int2 => tco:u1.a0
+int3 => tco:u1.b0
+s0 => tco:u1.clk
+s0 => tco:u0.clk
+s1 => tco:u2.clk
+o2 <= tco:u2.o0
+
+
+|fco|tco:u0
+a0 => o0~0.DATAB
+b0 => o0~0.DATAA
+clk => o0~0.OUTPUTSELECT
+o0 <= o0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fco|tco:u1
+a0 => o0~0.DATAB
+b0 => o0~0.DATAA
+clk => o0~0.OUTPUTSELECT
+o0 <= o0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fco|tco:u2
+a0 => o0~0.DATAB
+b0 => o0~0.DATAA
+clk => o0~0.OUTPUTSELECT
+o0 <= o0~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

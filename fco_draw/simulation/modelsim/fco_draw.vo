@@ -1,0 +1,177 @@
+// Copyright (C) 1991-2009 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition"
+
+// DATE "12/25/2018 20:22:14"
+
+// 
+// Device: Altera EP3C55F484C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module fco_draw (
+	pin_name9,
+	pin_name8,
+	pin_name3,
+	pin_name5,
+	pin_name4,
+	pin_name2,
+	pin_name);
+output 	pin_name9;
+input 	pin_name8;
+input 	pin_name3;
+input 	pin_name5;
+input 	pin_name4;
+input 	pin_name2;
+input 	pin_name;
+
+wire gnd = 1'b0;
+wire vcc = 1'b1;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("fco_draw_v.sdo");
+// synopsys translate_on
+
+wire \pin_name5~input_o ;
+wire \pin_name9~output_o ;
+wire \pin_name2~input_o ;
+wire \pin_name3~input_o ;
+wire \pin_name4~input_o ;
+wire \pin_name8~input_o ;
+wire \inst2|5~0_combout ;
+wire \pin_name~input_o ;
+wire \inst2|5~1_combout ;
+
+
+// atom is at IOIBUF_X1_Y53_N1
+cycloneiii_io_ibuf \pin_name5~input (
+	.i(pin_name5),
+	.ibar(gnd),
+	.o(\pin_name5~input_o ));
+// synopsys translate_off
+defparam \pin_name5~input .bus_hold = "false";
+defparam \pin_name5~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOOBUF_X0_Y49_N9
+cycloneiii_io_obuf \pin_name9~output (
+	.i(\inst2|5~1_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\pin_name9~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \pin_name9~output .bus_hold = "false";
+defparam \pin_name9~output .open_drain_output = "false";
+// synopsys translate_on
+
+// atom is at IOIBUF_X0_Y49_N1
+cycloneiii_io_ibuf \pin_name2~input (
+	.i(pin_name2),
+	.ibar(gnd),
+	.o(\pin_name2~input_o ));
+// synopsys translate_off
+defparam \pin_name2~input .bus_hold = "false";
+defparam \pin_name2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOIBUF_X11_Y53_N15
+cycloneiii_io_ibuf \pin_name3~input (
+	.i(pin_name3),
+	.ibar(gnd),
+	.o(\pin_name3~input_o ));
+// synopsys translate_off
+defparam \pin_name3~input .bus_hold = "false";
+defparam \pin_name3~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOIBUF_X73_Y53_N1
+cycloneiii_io_ibuf \pin_name4~input (
+	.i(pin_name4),
+	.ibar(gnd),
+	.o(\pin_name4~input_o ));
+// synopsys translate_off
+defparam \pin_name4~input .bus_hold = "false";
+defparam \pin_name4~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at IOIBUF_X3_Y53_N8
+cycloneiii_io_ibuf \pin_name8~input (
+	.i(pin_name8),
+	.ibar(gnd),
+	.o(\pin_name8~input_o ));
+// synopsys translate_off
+defparam \pin_name8~input .bus_hold = "false";
+defparam \pin_name8~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at LCCOMB_X1_Y49_N0
+cycloneiii_lcell_comb \inst2|5~0 (
+// Equation(s):
+// \inst2|5~0_combout  = \pin_name3~input_o  & (\pin_name4~input_o  # \pin_name8~input_o ) # !\pin_name3~input_o  & \pin_name5~input_o  & (!\pin_name8~input_o )
+
+	.dataa(\pin_name5~input_o ),
+	.datab(\pin_name3~input_o ),
+	.datac(\pin_name4~input_o ),
+	.datad(\pin_name8~input_o ),
+	.cin(gnd),
+	.combout(\inst2|5~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst2|5~0 .lut_mask = 16'hCCE2;
+defparam \inst2|5~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// atom is at IOIBUF_X0_Y48_N8
+cycloneiii_io_ibuf \pin_name~input (
+	.i(pin_name),
+	.ibar(gnd),
+	.o(\pin_name~input_o ));
+// synopsys translate_off
+defparam \pin_name~input .bus_hold = "false";
+defparam \pin_name~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// atom is at LCCOMB_X1_Y49_N2
+cycloneiii_lcell_comb \inst2|5~1 (
+// Equation(s):
+// \inst2|5~1_combout  = \inst2|5~0_combout  & (\pin_name~input_o  # !\pin_name8~input_o ) # !\inst2|5~0_combout  & \pin_name2~input_o  & (\pin_name8~input_o )
+
+	.dataa(\pin_name2~input_o ),
+	.datab(\inst2|5~0_combout ),
+	.datac(\pin_name~input_o ),
+	.datad(\pin_name8~input_o ),
+	.cin(gnd),
+	.combout(\inst2|5~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst2|5~1 .lut_mask = 16'hE2CC;
+defparam \inst2|5~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign pin_name9 = \pin_name9~output_o ;
+
+endmodule
